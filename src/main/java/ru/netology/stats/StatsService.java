@@ -4,9 +4,12 @@ import java.util.Arrays; //импортируем модуль, для подс�
 
 public class StatsService {
     // считаем сумму всех элементов
-    public int calculateTotalSales(long[] sales) {
-        long sum = Arrays.stream(sales).sum();
-        return (int) sum;
+    public long calculateTotalSales(long[] sales) {
+        long sum = 0;
+        for (long sale : sales) {
+            sum += sale;
+        }
+        return sum;
     }
 
     // считаем среднее значение среди всех элементов
