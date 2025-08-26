@@ -33,7 +33,7 @@ public class StatsServiceTests {
     @Test
     public void testCalculateAverage() {
         int expected = 15;
-        int actual = service.calculateAverage(salesData);
+        long actual = service.calculateAverage(salesData);
         Assertions.assertEquals(expected, actual);
     }
 
