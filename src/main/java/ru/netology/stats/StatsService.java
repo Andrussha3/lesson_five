@@ -1,6 +1,5 @@
 package ru.netology.stats;
 
-import java.util.Arrays; //импортируем модуль, для подсчета суммы всех элементов в массиве
 
 public class StatsService {
     // считаем сумму всех элементов
@@ -9,12 +8,12 @@ public class StatsService {
         for (long sale : sales) {
             sum += sale;
         }
-        return sum;
+        return sum; // возвращаем long
     }
 
     // считаем среднее значение среди всех элементов
     public int calculateAverage(long[] sales) {
-        long sum = Arrays.stream(sales).sum();
+        long sum = calculateTotalSales(sales);
         long s = sum / sales.length;
         return (int) s;
     }
