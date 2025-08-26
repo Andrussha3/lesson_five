@@ -12,8 +12,8 @@ public class StatsServiceTests {
     // Этот метод запускается ПЕРЕД КАЖДЫМ тестом
     @BeforeEach
     public void setUp() {   // Объявление метода настройки
-        service = new StatsService();// Создаем экземпляр (объект) класса StatsService для тестирования
-        salesData = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18}; // тестовые данные
+        service = new StatsService();     // Создаем экземпляр (объект) класса StatsService для тестирования
+        salesData = new long[]{8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};    // тестовые данные
     }
 
     @Test
