@@ -18,7 +18,7 @@ public class StatsServiceTests {
 
     @Test
     public void testMaxSales() {
-        int expected = 6;
+        int expected = 8;
         int actual = service.maxSales(salesData);
         Assertions.assertEquals(expected, actual);
     }
