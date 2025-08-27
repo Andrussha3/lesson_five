@@ -12,17 +12,18 @@ public class StatsService {
     }
 
     // считаем среднее значение среди всех элементов
-    public long calculateAverage(long[] sales) {
+    public int calculateAverage(long[] sales) {
         long sum = calculateTotalSales(sales);
-        return sum / sales.length;
+        long s = sum / sales.length;
+        return (int) s;
     }
 
     // находим номер месяца, в котором были максимальные продажи
-    public long maxSales(long[] sales) {
+    public int maxSales(long[] sales) {
         int maxMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] >= sales[maxMonth]) {
+            if (sales[i] > sales[maxMonth]) {
                 maxMonth = i;
             }
         }
@@ -31,9 +32,9 @@ public class StatsService {
     }
 
     // считаем все месяца, где продажи были меньше среднего значения
-    public long countMonthsBelowAverage(long[] sales) {
+    public int countMonthsBelowAverage(long[] sales) {
         //  Получаем среднее значение, используя ранее написанный метод svg
-        long average = calculateAverage(sales);
+        int average = calculateAverage(sales);
         int count = 0;
 
         // Проходим по всем месяцам и считаем те, где продажи ниже среднего
@@ -47,9 +48,9 @@ public class StatsService {
     }
 
     // считаем все месяца, где продажи были больше среднего значения
-    public long countMonthsAboveAverage(long[] sales) {
+    public int countMonthsAboveAverage(long[] sales) {
         // 1. Получаем среднее значение, используя ранее написанный метод svg
-        long average = calculateAverage(sales);
+        int average = calculateAverage(sales);
         int count = 0;
 
         // Проходим по всем месяцам и считаем те, где продажи больше среднего
@@ -63,11 +64,11 @@ public class StatsService {
     }
 
     // находим номер месяца, в котором были минимальные продажи
-    public long minSales(long[] sales) {
+    public int minSales(long[] sales) {
         int minMonth = 0;
 
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] <= sales[minMonth]) {
+            if (sales[i] < sales[minMonth]) {
                 minMonth = i;
             }
         }
