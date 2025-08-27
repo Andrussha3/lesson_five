@@ -18,36 +18,36 @@ public class StatsServiceTests {
 
     @Test
     public void testMaxSales() {
-        int expected = 6;
-        int actual = service.maxSales(salesData);
+        long expected = 8;
+        long actual = service.maxSales(salesData);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testMinSales() {
-        int expected = 9;
-        int actual = service.minSales(salesData);
+        long expected = 9;
+        long actual = service.minSales(salesData);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testCalculateAverage() {
-        int expected = 15;
+        long expected = 15;
         long actual = service.calculateAverage(salesData);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testCountMonthsBelowAverage() {
-        int expected = 5;
-        int actual = service.countMonthsBelowAverage(salesData);
+        long expected = 5;
+        long actual = service.countMonthsBelowAverage(salesData);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testCountMonthsBeMoreAverage() {
-        int expected = 5;
-        int actual = service.countMonthsAboveAverage(salesData);
+        long expected = 5;
+        long actual = service.countMonthsAboveAverage(salesData);
         Assertions.assertEquals(expected, actual);
     }
 
